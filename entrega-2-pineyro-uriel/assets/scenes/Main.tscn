@@ -34,5 +34,5 @@ __meta__ = {
 position = Vector2( 410.83, 448.099 )
 
 [node name="Turret" parent="." instance=ExtResource( 5 )]
-position = Vector2( 263.702, 125.858 )
+position = Vector2( 518.494, 148.651 )
 projectile_scene = ExtResource( 6 )

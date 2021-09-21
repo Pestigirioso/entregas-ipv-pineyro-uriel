@@ -6,6 +6,3 @@
 [node name="TurretProjectile" instance=ExtResource( 2 )]
 texture = ExtResource( 1 )
 speed = 150.0
-
-[node name="Timer" parent="." index="0"]
-wait_time = 6.0

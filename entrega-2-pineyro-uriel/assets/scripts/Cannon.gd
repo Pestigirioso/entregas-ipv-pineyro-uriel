@@ -2,7 +2,7 @@ extends Sprite
 
 onready var fire_position: Position2D = $FirePosition
 
-export var projectile_scene: PackedScene
+export (PackedScene) var projectile_scene: PackedScene
 
 var projectile_container: Node
 
