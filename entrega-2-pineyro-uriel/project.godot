@@ -20,7 +20,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Entrega- 2 -pineyro-uriel"
+config/name="entrega-2-pineyro-uriel"
 run/main_scene="res://assets/scenes/Main.tscn"
 config/icon="res://icon.png"
 
