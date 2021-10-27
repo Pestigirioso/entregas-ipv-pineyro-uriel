@@ -4,7 +4,7 @@ class_name Turret
 onready var fire_position = $FirePosition
 onready var raycast = $FirePosition/RayCast2D
 onready var detection_area = $DetectionArea
-
+onready var body = $Body
 onready var state_machine = $StateMachine
 
 export (PackedScene) var projectile_scene
@@ -59,9 +59,8 @@ func _remove():
 func _on_DetectionArea_body_entered(body):
 	state_machine.notify_body_entered(body)
 
-
-
 func _on_DetectionArea_body_exited(body):
 	state_machine.notify_body_exited(body)
 
-
+func _play_animation(anim_name: String):
+	body.play(anim_name)
