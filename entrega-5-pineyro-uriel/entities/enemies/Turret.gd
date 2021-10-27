@@ -40,7 +40,6 @@ func _can_see_target()->bool:
 	raycast.force_raycast_update()
 	return raycast.is_colliding() && raycast.get_collider() == target
 
-
 func apply_movement():
 	velocity.y += 20
 	velocity = move_and_slide(velocity)
