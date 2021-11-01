@@ -33,7 +33,7 @@ tracks/0/keys = {
 "values": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=3]
 resource_name = "fall"
 length = 0.6
 step = 0.04
@@ -50,8 +50,7 @@ tracks/0/keys = {
 "values": [ 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "idle"
+[sub_resource type="Animation" id=4]
 length = 0.65
 loop = true
 step = 0.04
@@ -85,7 +84,7 @@ tracks/0/keys = {
 "values": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 length = 0.82
 loop = true
 step = 0.041
@@ -134,7 +133,7 @@ scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 7 )
 hframes = 15
 vframes = 8
-frame = 75
+frame = 60
 
 [node name="Cannon" type="Sprite" parent="."]
 position = Vector2( 15, 17.4617 )
@@ -165,7 +164,7 @@ cast_to = Vector2( 0, 5 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/death = SubResource( 2 )
-anims/fall = SubResource( 6 )
-anims/idle = SubResource( 3 )
+anims/fall = SubResource( 3 )
+anims/idle = SubResource( 4 )
 anims/jump = SubResource( 5 )
-anims/walk = SubResource( 4 )
+anims/walk = SubResource( 6 )
