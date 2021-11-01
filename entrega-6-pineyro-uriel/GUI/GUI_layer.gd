@@ -6,7 +6,9 @@ onready var fade_tween = $Fade/Tween
 onready var fade = $Fade/ScreenCover
 onready var hearths_container = $HearthsContainer
 onready var win_label = $WinLabel
+onready var background_player = $Background
 
+export (AudioStream) var game_over_sfx
 
 func _ready():
 	fade.color.a = 0
@@ -44,6 +46,8 @@ func _on_player_health_updated(amount:int, max_health:int):
 	for hearth in hearths_container.get_children():
 		hearth.update_hearth(amount, max_health)
 	if amount <= 0:
+		if amount == 0:
+			_play_gameover_music()
 		fade_to_black()
 
 
@@ -51,5 +55,6 @@ func _on_level_won():
 	win_label.show()
 	fade_to_black()
 
-
-
+func _play_gameover_music():
+	background_player.stream = game_over_sfx
+	background_player.play()
